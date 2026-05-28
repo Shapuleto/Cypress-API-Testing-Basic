@@ -31,7 +31,7 @@ describe("API Testing with Cypress - Authentications.", () => {
   });
 
   it("Bearer Token Git Hub.", () => {
-    const token = "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";
+    const token = "abc"; // Replace with your actual token
 
     cy.request({
       method: "GET",
@@ -45,11 +45,9 @@ describe("API Testing with Cypress - Authentications.", () => {
   });
 
   it("API Key Open Weather.", () => {
-    const token = "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";
-
     cy.request({
       method: "GET",
-      url: "api.openweathermap.org/data/2.5/forecast/daily",
+      url: "https://api.openweathermap.org/data/2.5/forecast/daily",
       qs: {
         q: "Chihuahua",
         appid: "fe9c5cddb7e01d747b4611c3fc9eaf2c",
